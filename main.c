@@ -46,7 +46,7 @@ int main(void) {
             fred = 3;
 
         }
-        else if (strcmp(userInput, "exit") != 0) {
+        else if (strcmp(userInput, "exit") == 0) {
             fred = 4;
         }
 
