@@ -48,6 +48,9 @@ int main(void) {
         }
         else if (strcmp(userInput, "exit") == 0) {
             fred = 4;
+            break;
+        } else {
+            fred = 5;
         }
 
         switch (fred)
@@ -55,18 +58,21 @@ int main(void) {
         case 1:
             printf("Enter the quantity of shirts needed: ");
             scanf("%d", &shirtQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         case 2:
             printf("Enter the quantity of shoes needed: ");
             scanf("%d", &shoeQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
 
         case 3:
             printf("Enter the quantity of pants needed: ");
             scanf("%d", &pantsQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         case 4:
-            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+           // printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         default:
             //f user input is not a valid clothing type or 'exit', display an error message and continue the loop
