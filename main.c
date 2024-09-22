@@ -22,6 +22,7 @@ int main(void) {
     char* shpInput = (char*)malloc(20 * sizeof(char));  // Array to store user input for clothing type
     int shirtQuantity = 0, shoeQuantity = 0, pantsQuantity = 0, fred = 0;  // Variables to store quantities of each clothing item
     double shipping = 0;
+    
     do {
 
        
