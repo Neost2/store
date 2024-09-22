@@ -58,7 +58,7 @@ int main(void) {
                 printf("Enter the quantity of %s needed: ", itemInput);
                 scanf("%d", &quantity);
                 shoeQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", itemInput, )
+                printf("Clothing item '%s' successfully added to your cart.\n", itemInput);
             }
             break;
         case 'p':
@@ -66,7 +66,7 @@ int main(void) {
                 printf("Enter the quantity of %s needed: ", itemInput);
                 scanf("%d", &quantity);
                 pantsQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", itemInput, )
+                printf("Clothing item '%s' successfully added to your cart.\n", itemInput);
             }
             break;
         default:
@@ -82,9 +82,9 @@ int main(void) {
     totalCost = (shirtQuantity * SHIRT_PRICE) + (shoeQuantity * SHOE_PRICE) + (pantsQuantity * PANTS_PRICE);
 
     /*Shipping selection*/
-    printf("\nEnter the shipping destination (USA, Mexico, Canada):");
+    printf("\nEnter the shipping destination (USA, Mexico, Canada): ");
     scanf("%s", countryInput);
-    printf("Enter the shipping method (standard, expedited):\n");
+    printf("Enter the shipping method (standard, expedited): ");
     scanf("%s", shippingInput);
     for (int i = 0; countryInput[i]; i++) countryInput[i] = tolower(countryInput[i]);  // Convert to lowercase
 
@@ -106,7 +106,7 @@ int main(void) {
         }
         break;
     default:
-        printf("Invalid country. Defaulting to USA standard shipping.\n");
+        printf("Invalid shipping destination. Defaulting to USA standard shipping.\n");
         taxRate = USA_TAX_RATE;
     }
 
@@ -156,11 +156,11 @@ int main(void) {
     printf("Shoes\t\t%d\t\t$%.2f\t\t$%.2f\n", shoeQuantity, SHOE_PRICE, shoeQuantity * SHOE_PRICE);
     printf("Pants\t\t%d\t\t$%.2f\t\t$%.2f\n", pantsQuantity, PANTS_PRICE, pantsQuantity * PANTS_PRICE);
     printf("-------------------------------------------------------\n");
-    printf("Total Cost:\t\t\t\t\t$%.2f\n", totalCost);
+    printf("Subtotal:\t\t\t\t\t$%.2f\n", totalCost);
     printf("Shipping Cost:\t\t\t\t\t$%.2f\n", shippingCost);
     printf("Tax Amount:\t\t\t\t\t$%.2f\n", taxAmount);
     printf("-------------------------------------------------------\n");
-    printf("Grand Total:\t\t\t\t\t$%.2f\n", totalCost + shippingCost + taxAmount);
+    printf("Total Cost (including tax and shipping):\t$%.2f\n", totalCost + shippingCost + taxAmount);
 
     return 0;
 }
