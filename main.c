@@ -3,6 +3,8 @@
 #include <stdio.h>   // Provides input/output functions
 #include <string.h>  // Provides string manipulation functions
 #include <stdlib.h>
+#include <ctype.h>
+
 // Define constants for clothing item prices using macros
 #define SHIRT_PRICE 19.99
 #define SHOE_PRICE 49.99
@@ -85,6 +87,11 @@ int main(void) {
         printf("Enter the shipping method (standard, expedited): ");
         scanf("%s", userInput);
         // Check user input and prompt for quantity based on clothing type
+
+        for (int i = 0; userInput[i]; i++) userInput[i] = tolower(userInput[i]);
+        switch (userInput[0])
+        { 
+        case 'u':
         if (strcmp(shpInput, "USA") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
@@ -102,7 +109,9 @@ int main(void) {
             shpInput1 = "USA";
             taxperc = UTAX;
         }
-        else if (strcmp(shpInput, "Mexico") == 0) {
+        break;
+        case 'm':
+        if (strcmp(shpInput, "Mexico") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
             if (strcmp(userInput, "standard") == 0)
@@ -119,7 +128,10 @@ int main(void) {
             shpInput1 = "Mexico";
             taxperc = MTAX;
         }
-        else if (strcmp(shpInput, "Canada") == 0) {
+        break;
+        case 'c':
+
+        if (strcmp(shpInput, "Canada") == 0) {
             // printf("Enter the shipping method (standard, expedited): ");
              //scanf("%s", shpInput);
             if (strcmp(userInput, "standard") == 0)
@@ -136,7 +148,8 @@ int main(void) {
             shpInput1 = "Canada";
             taxperc = CTAX;
         }
-        else {
+        default:
+        
             printf("Invalid shipping destination. Defaulting to USA standard shipping.\n");
             shipping = USA_std;
             taxperc = UTAX;
