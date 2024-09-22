@@ -22,10 +22,7 @@ int main(void) {
     char* shpInput = (char*)malloc(20 * sizeof(char));  // Array to store user input for clothing type
     int shirtQuantity = 0, shoeQuantity = 0, pantsQuantity = 0, fred = 0;  // Variables to store quantities of each clothing item
     double shipping = 0;
-    
     do {
-
-       
         // Display menu options to the user
         printf("Enter the type of clothing needed (shirt, shoes, pants).\n");
         printf("Type 'exit' to quit and proceed to shipping details.\n");
@@ -33,37 +30,52 @@ int main(void) {
         // Read user input for clothing type
         scanf("%s", userInput);
 
-        for (int i = 0; userInput[i]; i++) userInput[i] = tolower(userInput[i]);
+
 
         // Check user input and prompt for quantity based on clothing type
-       
+        if (strcmp(userInput, "shirt") == 0) {
+            fred = 1;
 
-        switch (userInput[0]) {
-        case 's':
-            if (strcmp(userInput, "shirt") == 0) {
-                printf("Enter the quantity of shirts needed: ");
-                scanf("%d", &quantity);
-                shirtQuantity += quantity;
+        }
+        else if (strcmp(userInput, "shoes") == 0) {
+            fred = 2;
 
-                printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+        }
+        else if (strcmp(userInput, "pants") == 0) {
 
-            }
-            else if (strcmp(userInput, "shoes") == 0) {
-                printf("Enter the quantity of shoes needed: ");
-                scanf("%d", &quantity);
-                shoeQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", userInput, )
-            }
+            fred = 3;
+
+        }
+        else if (strcmp(userInput, "exit") == 0) {
+            fred = 4;
             break;
-        case 'p':
-            if (strcmp(userInput, "pants") == 0) {
-                printf("Enter the quantity of pants needed: ");
-                scanf("%d", &quantity);
-                pantsQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", userInput, )
-            }
+        } else {
+            fred = 5;
+        }
+
+        switch (fred)
+        {
+        case 1:
+            printf("Enter the quantity of shirts needed: ");
+            scanf("%d", &shirtQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+            break;
+        case 2:
+            printf("Enter the quantity of shoes needed: ");
+            scanf("%d", &shoeQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+            break;
+
+        case 3:
+            printf("Enter the quantity of pants needed: ");
+            scanf("%d", &pantsQuantity);
+            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+            break;
+        case 4:
+           // printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         default:
+            //f user input is not a valid clothing type or 'exit', display an error message and continue the loop
             printf("Invalid clothing type. Please enter 'shirt', 'shoes', or 'pants'.\n");
         }
         // If user input is not 'exit', display a success message for adding the clothing item
