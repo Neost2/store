@@ -33,45 +33,37 @@ int main(void) {
 
 
         // Check user input and prompt for quantity based on clothing type
-        if (strcmp(userInput, "shirt") == 0) {
-            fred = 1;
 
-        }
-        else if (strcmp(userInput, "shoes") == 0) {
-            fred = 2;
-
-        }
-        else if (strcmp(userInput, "pants") == 0) {
-
-            fred = 3;
-
-        }
-        else if (strcmp(userInput, "exit") == 0) {
-            fred = 4;
-            break;
-        } else {
-            fred = 5;
-        }
-
-        switch (fred)
+        switch (userInput[0])
         {
-        case 1:
-            printf("Enter the quantity of shirts needed: ");
-            scanf("%d", &shirtQuantity);
-            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
-            break;
-        case 2:
-            printf("Enter the quantity of shoes needed: ");
-            scanf("%d", &shoeQuantity);
-            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
-            break;
+        case s:
+            if (strcmp(userInput, "shirt") == 0) {
+                //fred = 1;
+                printf("Enter the quantity of shirts needed: ");
+                scanf("%d", &shirtQuantity);
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+            }
+            else if (strcmp(userInput, "shoes") == 0) {
+             //   fred = 2;
 
-        case 3:
-            printf("Enter the quantity of pants needed: ");
-            scanf("%d", &pantsQuantity);
-            printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+                printf("Enter the quantity of shoes needed: ");
+                scanf("%d", &shoeQuantity);
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+
+            }
+                break;
+        
+        case p:
+            if (strcmp(userInput, "pants") == 0) {
+
+                //    fred = 3;
+                printf("Enter the quantity of pants needed: ");
+                scanf("%d", &pantsQuantity);
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput);
+
+            }
             break;
-        case 4:
+        case e:
            // printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         default:
