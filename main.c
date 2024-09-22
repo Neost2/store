@@ -38,29 +38,29 @@ int main(void) {
         // Check user input and prompt for quantity based on clothing type
        
 
-        switch (itemInput[0]) {
+        switch (userInput[0]) {
         case 's':
-            if (strcmp(itemInput, "shirt") == 0) {
+            if (strcmp(userInput, "shirt") == 0) {
                 printf("Enter the quantity of shirts needed: ");
                 scanf("%d", &quantity);
                 shirtQuantity += quantity;
 
-                printf("Clothing item '%s' successfully added to your cart.\n", itemInput);
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput);
 
             }
-            else if (strcmp(itemInput, "shoes") == 0) {
+            else if (strcmp(userInput, "shoes") == 0) {
                 printf("Enter the quantity of shoes needed: ");
                 scanf("%d", &quantity);
                 shoeQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", itemInput, )
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput, )
             }
             break;
         case 'p':
-            if (strcmp(itemInput, "pants") == 0) {
+            if (strcmp(userInput, "pants") == 0) {
                 printf("Enter the quantity of pants needed: ");
                 scanf("%d", &quantity);
                 pantsQuantity += quantity;
-                printf("Clothing item '%s' successfully added to your cart.\n", itemInput, )
+                printf("Clothing item '%s' successfully added to your cart.\n", userInput, )
             }
             break;
         default:
