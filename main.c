@@ -92,7 +92,7 @@ int main(void) {
         switch (userInput[0])
         { 
         case 'u':
-        if (strcmp(shpInput, "USA") == 0) {
+        if (strcmp(shpInput, "usa") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
 
@@ -111,7 +111,7 @@ int main(void) {
         }
         break;
         case 'm':
-        if (strcmp(shpInput, "Mexico") == 0) {
+        if (strcmp(shpInput, "mexico") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
             if (strcmp(userInput, "standard") == 0)
@@ -131,7 +131,7 @@ int main(void) {
         break;
         case 'c':
 
-        if (strcmp(shpInput, "Canada") == 0) {
+        if (strcmp(shpInput, "canada") == 0) {
             // printf("Enter the shipping method (standard, expedited): ");
              //scanf("%s", shpInput);
             if (strcmp(userInput, "standard") == 0)
