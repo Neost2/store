@@ -36,7 +36,7 @@ int main(void) {
 
         switch (userInput[0])
         {
-        case s:
+        case 's':
             if (strcmp(userInput, "shirt") == 0) {
                 //fred = 1;
                 printf("Enter the quantity of shirts needed: ");
@@ -53,7 +53,7 @@ int main(void) {
             }
                 break;
         
-        case p:
+        case 'p':
             if (strcmp(userInput, "pants") == 0) {
 
                 //    fred = 3;
@@ -63,7 +63,7 @@ int main(void) {
 
             }
             break;
-        case e:
+        case 'e':
            // printf("Clothing item '%s' successfully added to your cart.\n", userInput);
             break;
         default:
