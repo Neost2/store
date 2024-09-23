@@ -88,8 +88,8 @@ int main(void) {
         scanf("%s", userInput);
         // Check user input and prompt for quantity based on clothing type
 
-        for (int i = 0; userInput[i]; i++) userInput[i] = tolower(userInput[i]);
-        switch (userInput[0])
+        for (int i = 0; shpInput[i]; i++) shpInput[i] = tolower(shpInput[i]);
+        switch (shpInput[0])
         { 
         case 'u':
         if (strcmp(shpInput, "usa") == 0) {
