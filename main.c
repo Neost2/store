@@ -91,7 +91,7 @@ int main(void) {
         for (int i = 0; shpInput[i]; i++) shpInput[i] = tolower(shpInput[i]);
         switch (shpInput[0])
         { 
-        case 'u':
+    case 'u':
         if (strcmp(shpInput, "usa") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
@@ -110,7 +110,7 @@ int main(void) {
             taxperc = UTAX;
         }
         break;
-        case 'm':
+    case 'm':
         if (strcmp(shpInput, "mexico") == 0) {
             //printf("Enter the shipping method (standard, expedited): ");
             //scanf("%s", shpInput);
@@ -129,8 +129,7 @@ int main(void) {
             taxperc = MTAX;
         }
         break;
-        case 'c':
-
+    case 'c':
         if (strcmp(shpInput, "canada") == 0) {
             // printf("Enter the shipping method (standard, expedited): ");
              //scanf("%s", shpInput);
@@ -148,6 +147,7 @@ int main(void) {
             shpInput1 = "Canada";
             taxperc = CTAX;
         }
+        break;
         default:
         
             printf("Invalid shipping destination. Defaulting to USA standard shipping.\n");
